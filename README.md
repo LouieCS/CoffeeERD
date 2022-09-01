@@ -2,6 +2,34 @@
 Created on August 2022 for my Data Management - Applications class.
 Database Management System used: MySQL
 ___________________________________________________________________
+
+COMPETENCIES
+4018.1.1 : Conceptual Models to Physical Schemas
+
+The graduate creates conceptual data models and translates them into physical schemas.
+
+4018.1.2 : Create Databases
+
+The graduate creates databases utilizing SQL Data Definition Language (DDL) in MySQL environment.
+
+4018.1.3 : Create/Modify Tables and Views
+
+The graduate creates and modifies tables and views employing SQL Data Definition Language (DDL) in MySQL environment.
+
+4018.1.4 : Create Primary Keys/Foreign Keys and Indexes
+
+The graduate creates and modifies primary keys (PKs) and foreign keys (FKs) and indexes with SQL Data Definition Language (DDL) in MySQL environment.
+
+4018.1.5 : Populate Tables
+
+The graduate populates tables with insert, update, and delete using DML in the MySQL environment.
+
+4018.1.6 : Create Simple and Complex Queries
+
+The graduate creates simple Select-From-Where (SFW) and complex 3+ table join queries with Data Manipulation Language (DML) in MySQL environment.
+___________________________________________________________________
+INTRODUCTION
+
 A.  Construct a normalized physical database model to represent the ordering process for Nora’s Bagel Bin by doing the following:
 
 1.  Complete the second normal form (2NF) section of the attached document by doing the following:
