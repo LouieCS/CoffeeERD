@@ -2,8 +2,40 @@
 Created on August 2022 for my Data Management - Applications class.
 Database Management System used: MySQL
 ___________________________________________________________________
+A.  Construct a normalized physical database model to represent the ordering process for Nora’s Bagel Bin by doing the following:
 
- Create a database  by doing the following:
+1.  Complete the second normal form (2NF) section of the attached document by doing the following:
+
+a.  Assign each attribute from the 1NF table into the correct 2NF table.
+
+b.  Describe the relationship between the two pairs of 2NF tables by indicating their cardinality in each of the dotted cells: one-to-one (1:1), one-to-many (1:M), many-to-one (M:1), or many-to-many (M:M).
+
+
+Note: Cardinality is read left to right and top to bottom, and the preferred method of notation is crow's foot.
+
+2.  Complete the third normal form (3NF) section of the attached “Nora’s Bagel Bin Database Blueprints” document by doing the following:
+
+a.  Assign each attribute from your 2NF "Bagel Order" table into one of the new 3NF tables. Copy all other information from your 2NF diagram into the 3NF diagram.
+
+b.  Provide each 3NF table with a name that reflects its contents.
+
+c.  Create a new field that will be used as a key linking the two 3NF tables you named in part A2b. Ensure that your primary key (PK) and foreign key (FK) fields are in the correct locations in the 3NF diagram.
+
+d.  Describe the relationships between the 3NF tables by indicating their cardinality in each of the dotted cells: one-to-one (1:1), one-to-many (1:M), many-to-one (M:1), or many-to-many (M:M).
+
+
+Note: Cardinality is read left to right and top to bottom, and the preferred method of notation is crow's foot.
+
+
+3.  Complete the "Final Physical Database Model" section of the attached document by doing the following:
+
+a.  Copy the table names and cardinality information from your 3NF diagram into the “Final Physical Database Model” and rename the attributes.
+
+b.  Assign one of the following five data types to each attribute in your 3NF tables: CHAR(), VARCHAR(), TIMESTAMP, INTEGER, or NUMERIC(). Each data type must be used at least once.
+
+
+
+B.  Create a database  by doing the following:
 
 1.  Develop SQL code to create each table  by doing the following:
 
