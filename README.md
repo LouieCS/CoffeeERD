@@ -1,5 +1,6 @@
 # CoffeeERD
 Created on August 2022 for my Data Management - Applications class.
+Database Management System used: MySQL
 ___________________________________________________________________
 
  Create a database  by doing the following:
