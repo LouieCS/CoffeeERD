@@ -1,0 +1,69 @@
+CREATE TABLE Coffee_Shop (
+	shop_id	integer,
+	shop_name	varchar(50),
+	city		varchar(50),
+	state		char(2),
+	PRIMARY KEY (shop_id)
+);
+
+CREATE TABLE Employee (
+	employee_id	integer,
+	first_name	varchar(30),
+	last_name	varchar(30),
+	hire_date	date,
+	job_title	varchar(30),
+	shop_id 	integer,
+	PRIMARY KEY (employee_id),
+	FOREIGN KEY (shop_id) REFERENCES Coffee_Shop(shop_id)
+);
+
+CREATE TABLE Supplier (
+	supplier_id 		integer,
+	company_name	varchar(50),
+	country 		varchar(30),
+	sales_contact_name 	varchar(60),
+	email 			varchar(50) NOT NULL,
+	PRIMARY KEY (supplier_id)
+);
+
+CREATE TABLE Coffee (
+	coffee_id 		integer,
+	shop_id 		integer,
+	supplier_id 		integer,
+	coffee_name 		varchar(30),
+	price_per_pound 	numeric(5,2),
+	PRIMARY KEY (coffee_id),
+	FOREIGN KEY(shop_id) REFERENCES Coffee_Shop(shop_id),
+	FOREIGN KEY(supplier_id) REFERENCES Supplier(supplier_id)
+);
+
+INSERT INTO Coffee_Shop VALUES 
+	(04, 'Evergreen Cafe', 'San Jose', 'CA'),
+	(01, 'Caffeine Addicts', 'Las Vegas', 'NV'),
+	(08, 'Sunny’s Coffee', 'Jacksonville', 'FL')
+;
+INSERT INTO Employee VALUES
+	(03, 'Jasper', 'Weatherby', '2015-02-01', 'Store Manager', 08),
+	(21, 'John', 'Cena', '2019-04-02', 'Shift Supervisor', 01),
+	(35, 'Joe', 'Thornton', '2022-07-19', 'Barista', 04),
+	(37, 'Jimmy', 'Garoppolo', '2022-08-29', 'Backup Barista', 04)
+;
+
+INSERT INTO Supplier VALUES
+	(25, 'Arabica Beans', 'Colombia', 'María Ortega', 'ortega.maria@arabicabeans.com'),
+	(01, 'Goat Coffea', 'United States', 'Steph Curry', 'SCurry@goat.com'),
+	(99, 'Gretzky Delivers', 'Canada', 'Paul Bissonnette', 'biznasty@gretzky.net')
+;
+
+INSERT INTO Coffee VALUES
+	(89, 08, 25, 'Hazelnut', 8.25),
+	(29, 04, 01, 'Cappuccino', 7.50),
+	(42, 01, 99, 'Ristrettot', 6.99)
+;
+
+CREATE VIEW employee_view AS
+SELECT employee_id, CONCAT(first_name, ' ', last_name) AS employee_full_name, hire_date, job_title, shop_id
+FROM Employee
+
+CREATE INDEX index_coffee_name
+ON Coffee(coffee_name)
