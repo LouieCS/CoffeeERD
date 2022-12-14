@@ -1,6 +1,8 @@
 # CoffeeERD-MySQL
 Created on August 2022 for my Data Management - Applications class.
 Database Management System used: MySQL
+
+This project involves the use of a relational database management system.
 ___________________________________________________________________
 
 COMPETENCIES
